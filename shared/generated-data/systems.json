@@ -1,0 +1,405 @@
+[
+  {
+    "id": "SYS-001",
+    "name": "移动展业平台",
+    "leadDepartment": "公司业务部",
+    "targetDate": "2026-12",
+    "status": "待启动",
+    "progress": 20,
+    "source": {
+      "workbook": "临商银行十五五战略规划.xlsx",
+      "sheet": "系统建设清单",
+      "row": 2
+    }
+  },
+  {
+    "id": "SYS-002",
+    "name": "客户关系管理（CRM）",
+    "leadDepartment": "普惠金融部",
+    "targetDate": "2026-12",
+    "status": "进行中",
+    "progress": 45,
+    "source": {
+      "workbook": "临商银行十五五战略规划.xlsx",
+      "sheet": "系统建设清单",
+      "row": 3
+    }
+  },
+  {
+    "id": "SYS-003",
+    "name": "对公客户经理计价系统",
+    "leadDepartment": "公司业务部",
+    "targetDate": "2026-12",
+    "status": "待验收",
+    "progress": 60,
+    "source": {
+      "workbook": "临商银行十五五战略规划.xlsx",
+      "sheet": "系统建设清单",
+      "row": 4
+    }
+  },
+  {
+    "id": "SYS-004",
+    "name": "对公CRM系统",
+    "leadDepartment": "公司业务部",
+    "targetDate": "2026-12",
+    "status": "已完成",
+    "progress": 80,
+    "source": {
+      "workbook": "临商银行十五五战略规划.xlsx",
+      "sheet": "系统建设清单",
+      "row": 5
+    }
+  },
+  {
+    "id": "SYS-005",
+    "name": "零售CRM系统",
+    "leadDepartment": "个人业务部",
+    "targetDate": "2026-12",
+    "status": "待启动",
+    "progress": 20,
+    "source": {
+      "workbook": "临商银行十五五战略规划.xlsx",
+      "sheet": "系统建设清单",
+      "row": 6
+    }
+  },
+  {
+    "id": "SYS-006",
+    "name": "大零售平台",
+    "leadDepartment": "个人业务部",
+    "targetDate": "2026-12",
+    "status": "进行中",
+    "progress": 45,
+    "source": {
+      "workbook": "临商银行十五五战略规划.xlsx",
+      "sheet": "系统建设清单",
+      "row": 7
+    }
+  },
+  {
+    "id": "SYS-007",
+    "name": "建立审计工作系统",
+    "leadDepartment": "审计部",
+    "targetDate": "2026-12",
+    "status": "待验收",
+    "progress": 60,
+    "source": {
+      "workbook": "临商银行十五五战略规划.xlsx",
+      "sheet": "系统建设清单",
+      "row": 8
+    }
+  },
+  {
+    "id": "SYS-008",
+    "name": "人力资源管理系统",
+    "leadDepartment": "人力资源部",
+    "targetDate": "2026-12",
+    "status": "已完成",
+    "progress": 80,
+    "source": {
+      "workbook": "临商银行十五五战略规划.xlsx",
+      "sheet": "系统建设清单",
+      "row": 9
+    }
+  },
+  {
+    "id": "SYS-009",
+    "name": "线上申贷门户",
+    "leadDepartment": "普惠金融部",
+    "targetDate": "2027-06",
+    "status": "待启动",
+    "progress": 20,
+    "source": {
+      "workbook": "临商银行十五五战略规划.xlsx",
+      "sheet": "系统建设清单",
+      "row": 10
+    }
+  },
+  {
+    "id": "SYS-010",
+    "name": "普惠小程序",
+    "leadDepartment": "普惠金融部",
+    "targetDate": "2027-06",
+    "status": "进行中",
+    "progress": 45,
+    "source": {
+      "workbook": "临商银行十五五战略规划.xlsx",
+      "sheet": "系统建设清单",
+      "row": 11
+    }
+  },
+  {
+    "id": "SYS-011",
+    "name": "智能风控决策引擎",
+    "leadDepartment": "风险管理部",
+    "targetDate": "2027-06",
+    "status": "待验收",
+    "progress": 60,
+    "source": {
+      "workbook": "临商银行十五五战略规划.xlsx",
+      "sheet": "系统建设清单",
+      "row": 12
+    }
+  },
+  {
+    "id": "SYS-012",
+    "name": "普惠金融数据湖/数据仓库",
+    "leadDepartment": "数字金融部",
+    "targetDate": "2027-06",
+    "status": "已完成",
+    "progress": 80,
+    "source": {
+      "workbook": "临商银行十五五战略规划.xlsx",
+      "sheet": "系统建设清单",
+      "row": 13
+    }
+  },
+  {
+    "id": "SYS-013",
+    "name": "政务数据对接",
+    "leadDepartment": "普惠金融部",
+    "targetDate": "2027-06",
+    "status": "待启动",
+    "progress": 20,
+    "source": {
+      "workbook": "临商银行十五五战略规划.xlsx",
+      "sheet": "系统建设清单",
+      "row": 14
+    }
+  },
+  {
+    "id": "SYS-014",
+    "name": "积分权益平台",
+    "leadDepartment": "个人业务部",
+    "targetDate": "2027-06",
+    "status": "进行中",
+    "progress": 45,
+    "source": {
+      "workbook": "临商银行十五五战略规划.xlsx",
+      "sheet": "系统建设清单",
+      "row": 15
+    }
+  },
+  {
+    "id": "SYS-015",
+    "name": "外呼平台",
+    "leadDepartment": "个人业务部",
+    "targetDate": "2027-06",
+    "status": "待验收",
+    "progress": 60,
+    "source": {
+      "workbook": "临商银行十五五战略规划.xlsx",
+      "sheet": "系统建设清单",
+      "row": 16
+    }
+  },
+  {
+    "id": "SYS-016",
+    "name": "对公运营数据可视化大屏",
+    "leadDepartment": "公司业务部",
+    "targetDate": "2027-12",
+    "status": "已完成",
+    "progress": 80,
+    "source": {
+      "workbook": "临商银行十五五战略规划.xlsx",
+      "sheet": "系统建设清单",
+      "row": 17
+    }
+  },
+  {
+    "id": "SYS-017",
+    "name": "移动OA上开发对公金融动账提醒功能模块",
+    "leadDepartment": "公司业务部",
+    "targetDate": "2027-12",
+    "status": "待启动",
+    "progress": 20,
+    "source": {
+      "workbook": "临商银行十五五战略规划.xlsx",
+      "sheet": "系统建设清单",
+      "row": 18
+    }
+  },
+  {
+    "id": "SYS-018",
+    "name": "手机银行 APP 搭建权益中心、积分商城与客户等级展示专区",
+    "leadDepartment": "个人业务部",
+    "targetDate": "2027-12",
+    "status": "进行中",
+    "progress": 45,
+    "source": {
+      "workbook": "临商银行十五五战略规划.xlsx",
+      "sheet": "系统建设清单",
+      "row": 19
+    }
+  },
+  {
+    "id": "SYS-019",
+    "name": "个人统一额度管理系统",
+    "leadDepartment": "消费金融部",
+    "targetDate": "2027-12",
+    "status": "待验收",
+    "progress": 60,
+    "source": {
+      "workbook": "临商银行十五五战略规划.xlsx",
+      "sheet": "系统建设清单",
+      "row": 20
+    }
+  },
+  {
+    "id": "SYS-020",
+    "name": "核心记账系统",
+    "leadDepartment": "消费金融部",
+    "targetDate": "2027-12",
+    "status": "已完成",
+    "progress": 80,
+    "source": {
+      "workbook": "临商银行十五五战略规划.xlsx",
+      "sheet": "系统建设清单",
+      "row": 21
+    }
+  },
+  {
+    "id": "SYS-021",
+    "name": "移动展业系统",
+    "leadDepartment": "公司业务部",
+    "targetDate": "2027-12",
+    "status": "待启动",
+    "progress": 20,
+    "source": {
+      "workbook": "临商银行十五五战略规划.xlsx",
+      "sheet": "系统建设清单",
+      "row": 22
+    }
+  },
+  {
+    "id": "SYS-022",
+    "name": "智能风控系统（含模型、策略）",
+    "leadDepartment": "风险管理部",
+    "targetDate": "2027-12",
+    "status": "进行中",
+    "progress": 45,
+    "source": {
+      "workbook": "临商银行十五五战略规划.xlsx",
+      "sheet": "系统建设清单",
+      "row": 23
+    }
+  },
+  {
+    "id": "SYS-023",
+    "name": "智能报告系统",
+    "leadDepartment": "授信审批部",
+    "targetDate": "2027-12",
+    "status": "待验收",
+    "progress": 60,
+    "source": {
+      "workbook": "临商银行十五五战略规划.xlsx",
+      "sheet": "系统建设清单",
+      "row": 24
+    }
+  },
+  {
+    "id": "SYS-024",
+    "name": "银担合作系统",
+    "leadDepartment": "普惠金融部",
+    "targetDate": "2028-12",
+    "status": "已完成",
+    "progress": 80,
+    "source": {
+      "workbook": "临商银行十五五战略规划.xlsx",
+      "sheet": "系统建设清单",
+      "row": 25
+    }
+  },
+  {
+    "id": "SYS-025",
+    "name": "数字普惠平台",
+    "leadDepartment": "普惠金融部",
+    "targetDate": "2028-12",
+    "status": "待启动",
+    "progress": 20,
+    "source": {
+      "workbook": "临商银行十五五战略规划.xlsx",
+      "sheet": "系统建设清单",
+      "row": 26
+    }
+  },
+  {
+    "id": "SYS-026",
+    "name": "贷后监控与预警系统",
+    "leadDepartment": "风险管理部",
+    "targetDate": "2028-12",
+    "status": "进行中",
+    "progress": 45,
+    "source": {
+      "workbook": "临商银行十五五战略规划.xlsx",
+      "sheet": "系统建设清单",
+      "row": 27
+    }
+  },
+  {
+    "id": "SYS-027",
+    "name": "贷后管理系统（催收与处置）",
+    "leadDepartment": "风险管理部",
+    "targetDate": "2028-12",
+    "status": "待验收",
+    "progress": 60,
+    "source": {
+      "workbook": "临商银行十五五战略规划.xlsx",
+      "sheet": "系统建设清单",
+      "row": 28
+    }
+  },
+  {
+    "id": "SYS-028",
+    "name": "智慧营销平台",
+    "leadDepartment": "公司业务部",
+    "targetDate": "2028-12",
+    "status": "已完成",
+    "progress": 80,
+    "source": {
+      "workbook": "临商银行十五五战略规划.xlsx",
+      "sheet": "系统建设清单",
+      "row": 29
+    }
+  },
+  {
+    "id": "SYS-029",
+    "name": "非现场监测模型",
+    "leadDepartment": "审计部",
+    "targetDate": "2029-12",
+    "status": "待启动",
+    "progress": 20,
+    "source": {
+      "workbook": "临商银行十五五战略规划.xlsx",
+      "sheet": "系统建设清单",
+      "row": 30
+    }
+  },
+  {
+    "id": "SYS-030",
+    "name": "供应链金融平台",
+    "leadDepartment": "普惠金融部",
+    "targetDate": "2030-12",
+    "status": "进行中",
+    "progress": 45,
+    "source": {
+      "workbook": "临商银行十五五战略规划.xlsx",
+      "sheet": "系统建设清单",
+      "row": 31
+    }
+  },
+  {
+    "id": "SYS-031",
+    "name": "数据可视化平台",
+    "leadDepartment": "数字金融部、金融科技部",
+    "targetDate": "2030-12",
+    "status": "待验收",
+    "progress": 60,
+    "source": {
+      "workbook": "临商银行十五五战略规划.xlsx",
+      "sheet": "系统建设清单",
+      "row": 32
+    }
+  }
+]

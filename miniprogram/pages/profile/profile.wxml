@@ -1,0 +1,9 @@
+<view class="notice">{{notice}}</view>
+<view class="panel">
+  <view class="title">{{user.roleName}}</view>
+  <view class="muted">{{user.description}}</view>
+  <view class="muted">当前角色来自登录页选择。“我的”页仅展示角色信息、Demo 说明、本地数据管理和退出登录。</view>
+  <view class="muted">所有修改只保存到当前微信客户端，不接后端、不与 PC 端同步。</view>
+  <button class="primary" bindtap="reset">恢复演示数据</button>
+  <button class="secondary" bindtap="logout">退出登录</button>
+</view>

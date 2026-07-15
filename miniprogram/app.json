@@ -1,0 +1,32 @@
+{
+  "pages": [
+    "pages/login/login",
+    "pages/dashboard/dashboard",
+    "pages/tasks/tasks",
+    "pages/fill/fill",
+    "pages/task-detail/task-detail",
+    "pages/measure-form/measure-form",
+    "pages/indicators/indicators",
+    "pages/profile/profile"
+  ],
+  "window": {
+    "navigationBarTitleText": "临商银行战略任务",
+    "navigationBarBackgroundColor": "#0f2d3a",
+    "navigationBarTextStyle": "white",
+    "backgroundColor": "#f3f6f8"
+  },
+  "tabBar": {
+    "color": "#667085",
+    "selectedColor": "#145c72",
+    "backgroundColor": "#ffffff",
+    "list": [
+      { "pagePath": "pages/dashboard/dashboard", "text": "首页" },
+      { "pagePath": "pages/tasks/tasks", "text": "任务" },
+      { "pagePath": "pages/fill/fill", "text": "填报" },
+      { "pagePath": "pages/indicators/indicators", "text": "指标" },
+      { "pagePath": "pages/profile/profile", "text": "我的" }
+    ]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

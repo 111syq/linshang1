@@ -1,0 +1,15 @@
+<view class="login-hero">
+  <view class="brand">临商银行</view>
+  <view class="title">临商银行战略任务小程序</view>
+  <view class="muted">Demo 版本，数据仅保存在当前设备，不与 PC 同步。</view>
+</view>
+<view class="role-grid">
+  <button wx:for="{{roles}}" wx:key="account" class="role-card {{selectedAccount===item.account?'selected':''}}" bindtap="selectRole" data-account="{{item.account}}">
+    <view>{{item.roleName}}</view>
+    <text>{{item.description}}</text>
+  </button>
+</view>
+<view class="enter-panel">
+  <view class="muted">{{selectedRole ? selectedRole.roleName + ' / ' + selectedRole.description : '请选择所属部门角色'}}</view>
+  <button class="primary" bindtap="enterSystem">进入系统</button>
+</view>

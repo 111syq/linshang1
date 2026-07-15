@@ -1,0 +1,220 @@
+[
+  {
+    "account": "strategy",
+    "roleCode": "strategy",
+    "roleName": "战略部门",
+    "name": "战略部门",
+    "role": "战略部门",
+    "department": "战略管理部",
+    "description": "全行战略驾驶舱与统筹管理视角",
+    "departments": [
+      "战略管理部"
+    ],
+    "permissions": [
+      "all",
+      "review",
+      "export"
+    ],
+    "password": "Linshang@2026"
+  },
+  {
+    "account": "corporate",
+    "roleCode": "corporate",
+    "roleName": "公司业务部门",
+    "name": "公司业务部门",
+    "role": "公司业务部门",
+    "department": "公司业务部",
+    "description": "对公战略任务牵头部门",
+    "departments": [
+      "公司业务部",
+      "机构业务部",
+      "国际业务部",
+      "票据业务中心",
+      "供应链金融中心",
+      "公司业务部-票据业务中心"
+    ],
+    "permissions": [
+      "department"
+    ],
+    "password": "Linshang@2026"
+  },
+  {
+    "account": "retail",
+    "roleCode": "retail",
+    "roleName": "零售金融部门",
+    "name": "零售金融部门",
+    "role": "零售金融部门",
+    "department": "个人业务部",
+    "description": "零售与财富管理任务牵头部门",
+    "departments": [
+      "个人业务部",
+      "消费金融部",
+      "零售金融部"
+    ],
+    "permissions": [
+      "department"
+    ],
+    "password": "Linshang@2026"
+  },
+  {
+    "account": "inclusive",
+    "roleCode": "inclusive",
+    "roleName": "普惠金融部门",
+    "name": "普惠金融部门",
+    "role": "普惠金融部门",
+    "department": "普惠金融部",
+    "description": "普惠客群和小微业务任务牵头部门",
+    "departments": [
+      "普惠金融部",
+      "小微业务部"
+    ],
+    "permissions": [
+      "department"
+    ],
+    "password": "Linshang@2026"
+  },
+  {
+    "account": "market",
+    "roleCode": "market",
+    "roleName": "金融市场部门",
+    "name": "金融市场部门",
+    "role": "金融市场部门",
+    "department": "金融市场部",
+    "description": "金融市场与同业协同任务部门",
+    "departments": [
+      "金融市场部",
+      "票据业务中心"
+    ],
+    "permissions": [
+      "department"
+    ],
+    "password": "Linshang@2026"
+  },
+  {
+    "account": "risk",
+    "roleCode": "risk",
+    "roleName": "风险合规部门",
+    "name": "风险合规部门",
+    "role": "风险合规部门",
+    "department": "风险管理部",
+    "description": "风险、合规、内控相关任务部门",
+    "departments": [
+      "风险管理部",
+      "法律合规部",
+      "授信审批部",
+      "资产保全部",
+      "内控合规部"
+    ],
+    "permissions": [
+      "department"
+    ],
+    "password": "Linshang@2026"
+  },
+  {
+    "account": "digital",
+    "roleCode": "digital",
+    "roleName": "数字科技部门",
+    "name": "数字科技部门",
+    "role": "数字科技部门",
+    "department": "数字金融部",
+    "description": "数字化和科技建设任务部门",
+    "departments": [
+      "数字金融部",
+      "金融科技部",
+      "科技部"
+    ],
+    "permissions": [
+      "department"
+    ],
+    "password": "Linshang@2026"
+  },
+  {
+    "account": "finance",
+    "roleCode": "finance",
+    "roleName": "计划财务部门",
+    "name": "计划财务部门",
+    "role": "计划财务部门",
+    "department": "计划财务部",
+    "description": "计划、预算、资源配置相关任务部门",
+    "departments": [
+      "计划财务部",
+      "资产负债管理部"
+    ],
+    "permissions": [
+      "department"
+    ],
+    "password": "Linshang@2026"
+  },
+  {
+    "account": "hr",
+    "roleCode": "hr",
+    "roleName": "人力资源部门",
+    "name": "人力资源部门",
+    "role": "人力资源部门",
+    "department": "人力资源部",
+    "description": "组织、人才、绩效相关任务部门",
+    "departments": [
+      "人力资源部"
+    ],
+    "permissions": [
+      "department"
+    ],
+    "password": "Linshang@2026"
+  },
+  {
+    "account": "governance",
+    "roleCode": "governance",
+    "roleName": "公司治理与综合管理部门",
+    "name": "公司治理与综合管理部门",
+    "role": "公司治理与综合管理部门",
+    "department": "综合管理部",
+    "description": "治理、综合协调和行政保障部门",
+    "departments": [
+      "综合管理部",
+      "董事会办公室",
+      "办公室",
+      "运营管理部",
+      "安全保卫部"
+    ],
+    "permissions": [
+      "department"
+    ],
+    "password": "Linshang@2026"
+  },
+  {
+    "account": "audit",
+    "roleCode": "audit",
+    "roleName": "监督审计部门",
+    "name": "监督审计部门",
+    "role": "监督审计部门",
+    "department": "审计部",
+    "description": "监督、审计和整改跟踪部门",
+    "departments": [
+      "审计部",
+      "纪检监察部",
+      "监事会办公室"
+    ],
+    "permissions": [
+      "department"
+    ],
+    "password": "Linshang@2026"
+  },
+  {
+    "account": "branch",
+    "roleCode": "branch",
+    "roleName": "分支机构",
+    "name": "分支机构",
+    "role": "分支机构",
+    "department": "分支机构",
+    "description": "分支机构执行与反馈视角",
+    "departments": [
+      "分支机构",
+      "各分支机构",
+      "各支行"
+    ],
+    "permissions": [
+      "department"
+    ],
+    "password": "Linshang@2026"
+  }
+]

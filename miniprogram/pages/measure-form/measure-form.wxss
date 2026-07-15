@@ -1,0 +1,15 @@
+.form label {
+  display: block;
+  margin-bottom: 18rpx;
+  color: #667085;
+}
+.form input, .form textarea {
+  display: block;
+  width: 100%;
+  margin-top: 8rpx;
+  padding: 16rpx;
+  border: 1rpx solid #dde5eb;
+  border-radius: 12rpx;
+  background: #fff;
+  color: #17212f;
+}

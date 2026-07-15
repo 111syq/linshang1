@@ -1,0 +1,60 @@
+.login-hero {
+  margin: 20rpx;
+  padding: 28rpx;
+  border-radius: 18rpx;
+  background: #0f2d3a;
+  color: #fff;
+}
+.login-hero .brand {
+  font-weight: 800;
+  opacity: .82;
+}
+.login-hero .title {
+  margin-top: 10rpx;
+  color: #fff;
+}
+.login-hero .muted {
+  margin-top: 8rpx;
+  color: rgba(255,255,255,.76);
+}
+.role-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12rpx;
+  margin: 16rpx 20rpx;
+}
+.role-card {
+  text-align: left;
+  min-height: 144rpx;
+  padding: 18rpx;
+  border-radius: 16rpx;
+  background: #fff;
+  border: 1rpx solid #dde5eb;
+  line-height: 1.35;
+}
+.role-card.selected {
+  border-color: #145c72;
+  box-shadow: 0 0 0 4rpx rgba(20,92,114,.12);
+}
+.role-card view {
+  color: #145c72;
+  font-weight: 800;
+}
+.role-card text {
+  display: block;
+  margin-top: 8rpx;
+  color: #667085;
+  font-size: 22rpx;
+}
+.enter-panel {
+  position: sticky;
+  bottom: 0;
+  margin: 16rpx 20rpx 24rpx;
+  padding: 18rpx;
+  border-radius: 18rpx;
+  background: #fff;
+  border: 1rpx solid #dde5eb;
+}
+.enter-panel button {
+  margin-top: 14rpx;
+}

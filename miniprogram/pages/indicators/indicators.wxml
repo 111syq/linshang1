@@ -1,0 +1,5 @@
+<view class="notice">{{notice}}</view>
+<view class="card" wx:for="{{indicators}}" wx:key="id">
+  <view class="title">{{item.name}}</view>
+  <view class="muted">{{item.department}} / 达成率 {{item.achievementRate}}% / {{item.riskLevel}}</view>
+</view>

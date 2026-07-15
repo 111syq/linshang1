@@ -1,0 +1,17 @@
+<view class="notice">{{notice}}</view>
+<view class="card task-card" wx:for="{{tasks}}" wx:key="id">
+  <view class="tag-line">
+    <text class="tag">{{item.code}}</text>
+    <text class="tag">{{item.status}}</text>
+    <text class="tag">{{item.riskLevel}}</text>
+  </view>
+  <view class="task-title">{{item.taskName}}</view>
+  <view class="muted">{{item.leadDepartment}} / 截止 {{item.endDate}}</view>
+  <view class="progress-row"><view class="progress"><view style="width: {{item.progress}}%;"></view></view><text>{{item.progress}}%</text></view>
+  <view class="muted">举措 {{item.doneMeasures}}/{{item.measureCount}} · 标准 {{item.doneStandards}}/{{item.standardCount}} · 审核 {{item.reviewStatus}}</view>
+  <view class="button-row">
+    <button class="secondary" bindtap="openTask" data-id="{{item.id}}">查看详情</button>
+    <button wx:if="{{isStrategy}}" class="{{item.reviewStatus === '待审核' ? 'primary' : 'secondary'}}" bindtap="openTask" data-id="{{item.id}}">{{item.reviewStatus === '待审核' ? '审核' : '查看填报'}}</button>
+    <button wx:else class="primary" bindtap="fillTask" data-id="{{item.id}}" disabled="{{!item.canFill}}">{{item.canFill ? '去填报' : '仅查看'}}</button>
+  </view>
+</view>

@@ -1,0 +1,14 @@
+<view class="notice">正在填报：{{task.code}} / 举措 {{measure.order}}</view>
+<view class="panel">
+  <view class="title">{{measure.title}}</view>
+  <text class="muted">{{measure.rawText}}</text>
+</view>
+<view class="panel form">
+  <label>完成比例<input type="number" value="{{measure.progress}}" bindinput="onProgress" /></label>
+  <label>本期完成情况<textarea value="{{measure.currentPeriodSummary}}" bindinput="onSummary" /></label>
+  <label>下一阶段计划<textarea value="{{measure.nextPlan}}" bindinput="onNext" /></label>
+  <view class="button-row">
+    <button class="secondary" bindtap="saveDraft">保存草稿</button>
+    <button class="primary" bindtap="submit">提交审核</button>
+  </view>
+</view>

@@ -1,0 +1,15 @@
+<view class="notice">{{notice}}</view>
+<view class="panel">
+  <view class="title">{{isStrategy ? '填报管理' : '进度填报'}}</view>
+  <view class="muted">{{isStrategy ? '部门填报状态、待审核事项、缺失和退回内容' : '本部门可填报任务和举措'}}</view>
+</view>
+<view class="card" wx:for="{{tasks}}" wx:key="id">
+  <view>
+    <text class="tag">{{item.code}}</text>
+    <text class="tag">{{item.reviewStatus}}</text>
+  </view>
+  <view class="title">{{item.taskName}}</view>
+  <view wx:if="{{isStrategy}}" class="muted">{{item.leadDepartment}} / 待审核 {{item.pendingMeasures}} / 填报缺失 {{item.missingMeasures}} / 退回 {{item.returnedMeasures}}</view>
+  <view wx:else class="muted">{{item.leadDepartment}} / 待填报举措 {{item.todoMeasures}}</view>
+  <button class="{{isStrategy ? 'secondary' : 'primary'}}" bindtap="fillTask" data-id="{{item.id}}">{{isStrategy ? '查看填报' : '选择举措填报'}}</button>
+</view>

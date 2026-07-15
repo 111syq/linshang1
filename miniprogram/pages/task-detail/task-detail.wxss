@@ -1,0 +1,40 @@
+.tabs {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8rpx;
+  margin: 14rpx 20rpx;
+}
+.tabs button {
+  border-radius: 999rpx;
+  background: #eef2f6;
+  color: #667085;
+  font-size: 24rpx;
+}
+.tabs button.active {
+  background: #145c72;
+  color: #fff;
+}
+.detail-head .title {
+  line-height: 1.35;
+}
+.compact-detail {
+  gap: 10rpx;
+}
+.fold-head {
+  display: flex;
+  justify-content: space-between;
+  gap: 12rpx;
+  align-items: center;
+}
+.fold-body {
+  display: grid;
+  gap: 8rpx;
+  padding-top: 8rpx;
+  border-top: 1rpx solid #dde5eb;
+}
+.fold-body text, .fold-text {
+  display: block;
+  color: #667085;
+  font-size: 24rpx;
+  line-height: 1.45;
+}

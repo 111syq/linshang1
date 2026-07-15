@@ -1,0 +1,13 @@
+{
+  "name": "linshang-strategy-task-demo",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "node scripts/dev-server.mjs",
+    "build": "node scripts/build.mjs",
+    "test": "node tests/run-tests.mjs",
+    "import:data": "node scripts/import-strategy-data.mjs"
+  },
+  "devDependencies": {}
+}

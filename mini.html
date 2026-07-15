@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="description" content="临商银行十五五战略规划任务管理平台小程序风格网页演示" />
+    <title>临商银行战略任务小程序演示</title>
+    <link rel="stylesheet" href="./assets/mini.css" />
+  </head>
+  <body>
+    <main class="mini-login" id="mini-login">
+      <section class="mini-login-head">
+        <strong>临商银行</strong>
+        <h1>临商银行战略任务小程序</h1>
+        <p>请选择十二类部门角色进入小程序 Demo。</p>
+        <span>演示版本，数据仅保存在当前浏览器，不与 PC 端同步。</span>
+      </section>
+      <section class="mini-role-grid" id="mini-login-roles"></section>
+      <button class="mini-enter" id="mini-enter" type="button" disabled>进入系统</button>
+    </main>
+    <main class="phone-app hidden" id="mini-app">
+      <header class="mini-top">
+        <div>
+          <strong id="mini-home-title">战略驾驶舱</strong>
+          <span id="mini-home-subtitle">战略任务小程序演示</span>
+        </div>
+        <button id="mini-profile-entry" type="button">我的</button>
+      </header>
+
+      <section class="mini-notice">演示版本，数据仅保存在当前浏览器，不与 PC 端同步。</section>
+
+      <section class="mini-page active" id="mini-dashboard">
+      </section>
+
+      <section class="mini-page" id="mini-tasks">
+        <div class="mini-search">
+          <input id="mini-search" type="search" placeholder="搜索任务编号、名称、部门" />
+          <button id="mini-filter" type="button">筛选</button>
+        </div>
+        <div class="mini-task-list" id="mini-task-list"></div>
+      </section>
+
+      <section class="mini-page" id="mini-fill">
+        <div class="mini-task-list" id="mini-fill-list"></div>
+      </section>
+
+      <section class="mini-page" id="mini-indicators">
+        <div class="mini-task-list" id="mini-indicator-list"></div>
+      </section>
+
+      <section class="mini-page" id="mini-profile">
+        <article class="mini-panel profile-panel">
+          <h2>我的</h2>
+          <p id="mini-user"></p>
+          <p>当前为小程序风格网页 Demo。所有修改只保存到本浏览器本地，不会同步到 PC、微信或其他设备。</p>
+          <button class="mini-primary" id="mini-reset" type="button">恢复演示数据</button>
+          <button class="mini-secondary" id="mini-copy-summary" type="button">复制任务摘要</button>
+          <button class="mini-secondary" id="mini-logout" type="button">退出登录</button>
+        </article>
+      </section>
+
+      <nav class="mini-tabbar">
+        <button class="active" data-mini-tab="dashboard" type="button" id="tab-dashboard">驾驶舱</button>
+        <button data-mini-tab="tasks" type="button">任务</button>
+        <button data-mini-tab="fill" type="button" id="tab-fill">填报</button>
+        <button data-mini-tab="indicators" type="button">指标</button>
+        <button data-mini-tab="profile" type="button">我的</button>
+      </nav>
+    </main>
+
+    <aside class="mini-sheet" id="mini-sheet">
+      <div class="sheet-mask" id="sheet-mask"></div>
+      <section class="sheet-body">
+        <div class="sheet-head">
+          <h2 id="sheet-title">详情</h2>
+          <button id="sheet-close" type="button">×</button>
+        </div>
+        <div id="sheet-content"></div>
+      </section>
+    </aside>
+
+    <div class="mini-toast" id="mini-toast"></div>
+    <script type="module" src="./assets/mini.js"></script>
+  </body>
+</html>

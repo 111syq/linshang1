@@ -1,0 +1,231 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="临商银行十五五战略规划任务管理平台纯前端 Demo" />
+    <title>临商银行“十五五”战略规划任务管理平台</title>
+    <link rel="stylesheet" href="./assets/styles.css" />
+  </head>
+  <body>
+    <main class="login-screen" id="login-screen">
+      <section class="login-panel">
+        <div class="brand-block">
+          <span class="brand-mark">临</span>
+          <div>
+            <strong>临商银行</strong>
+            <span>“十五五”战略规划任务管理平台</span>
+          </div>
+        </div>
+        <h1>临商银行“十五五”战略规划任务管理平台</h1>
+        <p class="lead">战略执行、任务跟踪、协同督办与考核管理静态展示版。</p>
+        <div class="login-feature-grid">
+          <span>角色分流</span>
+          <span>任务卡片</span>
+          <span>进度填报</span>
+          <span>指标监控</span>
+          <span>风险预警</span>
+          <span>报表导出</span>
+        </div>
+        <p class="demo-alert">当前系统为演示版本，数据仅保存在本机，不支持多端同步。</p>
+      </section>
+      <section class="login-card">
+        <div class="section-title">
+          <h2>登录平台</h2>
+          <span>十二类部门角色</span>
+        </div>
+        <form id="login-form">
+          <label>
+            <span>部门账号</span>
+            <select id="login-account"></select>
+          </label>
+          <label>
+            <span>密码</span>
+            <input id="login-password" type="password" value="Linshang@2026" />
+          </label>
+          <button class="primary full" type="submit">登录</button>
+        </form>
+        <div class="quick-roles" id="quick-roles"></div>
+        <p class="muted">本系统为 Demo，账号仅用于角色演示。统一密码：Linshang@2026</p>
+      </section>
+    </main>
+
+    <div class="shell hidden" id="app-shell">
+      <aside class="sidebar">
+        <a class="side-brand" href="#dashboard">
+          <span class="brand-mark">临</span>
+          <span>战略任务平台<small>纯前端演示版</small></span>
+        </a>
+        <nav class="nav" id="nav"></nav>
+        <section class="user-card">
+          <strong id="user-name"></strong>
+          <span id="user-meta"></span>
+          <button class="ghost full" id="logout-button" type="button">退出登录</button>
+        </section>
+      </aside>
+
+      <main class="main">
+        <div class="demo-ribbon">当前系统为演示版本，数据仅保存在本机，不支持多端同步。</div>
+        <header class="topbar">
+          <div>
+            <h1 id="page-title">战略执行驾驶舱</h1>
+            <p id="page-subtitle">全行战略任务、执行举措、验收标准、指标和风险预警</p>
+          </div>
+          <div class="top-actions">
+            <button class="secondary" id="reset-demo" type="button">恢复演示数据</button>
+            <button class="primary" id="export-all" type="button">导出全部数据</button>
+          </div>
+        </header>
+
+        <section class="view active" id="view-dashboard" data-title="战略执行驾驶舱" data-subtitle="全行战略任务、执行举措、验收标准、指标和风险预警">
+          <section class="meta-grid">
+            <article><span>统计周期</span><strong>2026年第二季度</strong></article>
+            <article><span>数据来源</span><strong>Excel + Word 静态导入</strong></article>
+            <article><span>最近刷新</span><strong id="refresh-time"></strong></article>
+            <article><span>运行模式</span><strong>本地存储 Demo</strong></article>
+          </section>
+          <section class="kpi-grid" id="dashboard-kpis"></section>
+          <section class="dashboard-layout">
+            <article class="panel">
+              <div class="section-title"><h2>任务状态分布</h2><span>点击状态筛选任务</span></div>
+              <div class="chart-list" id="status-chart"></div>
+            </article>
+            <article class="panel">
+              <div class="section-title"><h2>风险分布</h2><span>按最高风险口径</span></div>
+              <div class="chart-list" id="risk-chart"></div>
+            </article>
+          </section>
+          <section class="panel">
+            <div class="section-title"><h2>部门执行情况</h2><span>牵头任务、平均进度、填报率和异常</span></div>
+            <div class="table-wrap"><table id="department-table"></table></div>
+          </section>
+          <section class="dashboard-layout">
+            <article class="panel">
+              <div class="section-title"><h2>重点异常</h2><span>逾期、高风险、退回和待审核</span></div>
+              <div class="compact-list" id="exception-list"></div>
+            </article>
+            <article class="panel">
+              <div class="section-title"><h2>最近到期举措</h2><span>按截止时间排序</span></div>
+              <div class="compact-list" id="due-measures"></div>
+            </article>
+          </section>
+          <section class="panel">
+            <div class="section-title"><h2>指标监控</h2><span>未达标指标优先关注</span></div>
+            <div class="table-wrap"><table id="indicator-rank"></table></div>
+          </section>
+        </section>
+
+        <section class="view" id="view-tasks" data-title="战略任务列表" data-subtitle="卡片视图与表格视图，支持多条件筛选和本地导出">
+          <section class="panel filters">
+            <label><span>关键词</span><input id="filter-keyword" type="search" placeholder="编号、任务、部门" /></label>
+            <label><span>业务板块</span><select id="filter-section"></select></label>
+            <label><span>牵头部门</span><select id="filter-lead"></select></label>
+            <label><span>任务状态</span><select id="filter-status"></select></label>
+            <label><span>风险等级</span><select id="filter-risk"></select></label>
+            <div class="filter-actions">
+              <button class="ghost" id="toggle-advanced" type="button">展开高级筛选</button>
+              <button class="ghost" id="reset-filters" type="button">重置筛选</button>
+              <button class="secondary" id="export-filtered" type="button">导出筛选结果</button>
+            </div>
+            <div class="advanced-filters hidden" id="advanced-filters">
+              <label><span>协同部门</span><select id="filter-collab"></select></label>
+              <label><span>审核状态</span><select id="filter-review"></select></label>
+              <label><span>优先级</span><select id="filter-priority"></select></label>
+              <label><span>实施年份</span><select id="filter-year"></select></label>
+              <label><span>是否逾期</span><select id="filter-overdue"><option value="">全部</option><option value="yes">仅逾期</option></select></label>
+              <label><span>举措状态</span><select id="filter-measure-status"></select></label>
+              <label><span>标准状态</span><select id="filter-standard-status"></select></label>
+            </div>
+          </section>
+          <section class="view-switch">
+            <button class="seg active" data-task-view="card" type="button">卡片视图</button>
+            <button class="seg" data-task-view="table" type="button">表格视图</button>
+            <span id="task-count"></span>
+          </section>
+          <section class="task-grid" id="task-card-list"></section>
+          <section class="panel hidden" id="task-table-panel"><div class="table-wrap"><table id="task-table"></table></div></section>
+        </section>
+
+        <section class="view" id="view-review" data-title="模拟审核" data-subtitle="本地模拟提交、通过、退回和历史记录">
+          <section class="panel">
+            <div class="section-title"><h2>待审核任务</h2><span>审核流程仅保存在当前浏览器</span></div>
+            <div class="table-wrap"><table id="review-table"></table></div>
+          </section>
+        </section>
+
+        <section class="view" id="view-indicators" data-title="指标管理" data-subtitle="指标目标、当前值、达成率与风险状态">
+          <section class="panel"><div class="table-wrap"><table id="indicator-table"></table></div></section>
+        </section>
+
+        <section class="view" id="view-systems" data-title="系统建设项目" data-subtitle="战略相关系统建设清单">
+          <section class="task-grid" id="system-list"></section>
+        </section>
+
+        <section class="view" id="view-reports" data-title="报表与设置" data-subtitle="导入导出、打印、恢复演示数据和 Demo 说明">
+          <section class="report-grid">
+            <article class="panel report-card">
+              <h2>数据导出</h2>
+              <p>支持 JSON、CSV、Excel 兼容表格、单任务和当前筛选结果导出。</p>
+              <button class="primary" data-export-type="tasks" type="button">导出全部任务</button>
+              <button class="secondary" data-export-type="measures" type="button">导出举措台账</button>
+              <button class="secondary" data-export-type="standards" type="button">导出验收台账</button>
+              <button class="secondary" data-export-type="departments" type="button">导出部门台账 CSV</button>
+            </article>
+            <article class="panel report-card">
+              <h2>导入演示数据 JSON</h2>
+              <p>仅覆盖当前浏览器本地演示数据，不会连接服务器。</p>
+              <input id="import-json" type="file" accept="application/json" />
+            </article>
+            <article class="panel report-card">
+              <h2>恢复与说明</h2>
+              <p>清除本地修改并恢复项目内置任务、指标、审核记录和角色配置。</p>
+              <button class="danger" id="reset-demo-secondary" type="button">恢复演示数据</button>
+              <p class="muted">附件仅用于本地演示，刷新、清缓存或更换设备后可能丢失。</p>
+            </article>
+          </section>
+          <section class="panel">
+            <div class="section-title"><h2>导入报告</h2><span>由数据转换脚本生成</span></div>
+            <pre class="report-json" id="import-report"></pre>
+          </section>
+        </section>
+      </main>
+    </div>
+
+    <aside class="drawer" id="detail-drawer" aria-hidden="true">
+      <div class="drawer-head">
+        <div><span id="detail-code"></span><h2 id="detail-title"></h2></div>
+        <button class="icon" id="close-detail" type="button" aria-label="关闭">×</button>
+      </div>
+      <div class="tabs" id="detail-tabs">
+        <button class="tab active" data-tab="overview" type="button">任务概览</button>
+        <button class="tab" data-tab="measures" type="button">执行举措</button>
+        <button class="tab" data-tab="standards" type="button">标准与里程碑</button>
+        <button class="tab" data-tab="history" type="button">记录</button>
+      </div>
+      <div class="drawer-body" id="detail-body"></div>
+      <div class="drawer-actions">
+        <button class="ghost" id="print-task" type="button">打印任务卡</button>
+        <button class="secondary" id="export-task" type="button">导出单个任务</button>
+        <button class="primary" id="open-task-form" type="button">进入填报</button>
+      </div>
+    </aside>
+
+    <aside class="form-drawer" id="form-drawer" aria-hidden="true">
+      <form id="progress-form">
+        <div class="drawer-head">
+          <div><span id="form-context"></span><h2 id="form-title">进度填报</h2></div>
+          <button class="icon" id="close-form" type="button" aria-label="关闭">×</button>
+        </div>
+        <div class="drawer-body form-body" id="form-fields"></div>
+        <div class="drawer-actions sticky">
+          <button class="ghost" id="cancel-form" type="button">取消</button>
+          <button class="secondary" data-submit-action="draft" type="submit">保存草稿</button>
+          <button class="primary" data-submit-action="submit" type="submit">提交审核</button>
+        </div>
+      </form>
+    </aside>
+
+    <div class="toast" id="toast"></div>
+    <script type="module" src="./assets/app.js"></script>
+  </body>
+</html>

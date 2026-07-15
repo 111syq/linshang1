@@ -1,0 +1,50 @@
+<view class="panel detail-head">
+  <view class="title">{{task.code}} {{task.taskName}}</view>
+  <view class="muted">{{task.leadDepartment}} / {{task.status}} / {{task.riskLevel}} / {{task.progress}}% / 截止 {{task.endDate}}</view>
+</view>
+<view class="tabs">
+  <button wx:for="{{tabs}}" wx:key="key" class="{{activeTab===item.key?'active':''}}" bindtap="switchTab" data-tab="{{item.key}}">{{item.label}}</button>
+</view>
+<view wx:if="{{activeTab==='overview'}}" class="panel">
+  <view class="title">任务概览</view>
+  <view class="muted">整体进展：{{task.currentPeriodSummary || '-'}}</view>
+  <view class="muted">协调事项：{{task.coordinationRequest || '暂无'}}</view>
+  <view class="muted">待决策事项：{{task.decisionRequest || '暂无'}}</view>
+  <view class="fold-text">任务目标：{{task.taskGoal}}</view>
+</view>
+<view wx:if="{{activeTab==='measures'}}">
+  <view class="card compact-detail" wx:for="{{task.measures}}" wx:key="id">
+    <view class="fold-head" bindtap="toggleMeasure" data-id="{{item.id}}">
+      <view><text class="tag">举措 {{item.order}}</text><text class="tag">{{item.status}}</text><text class="tag">{{item.progress}}%</text></view>
+      <text class="muted">截止 {{item.dueDate}}</text>
+    </view>
+    <view class="task-title">{{item.title}}</view>
+    <view wx:if="{{expandedMeasureId===item.id}}" class="fold-body">
+      <text>{{item.rawText}}</text>
+      <text>完成情况：{{item.currentPeriodSummary || '-'}}</text>
+      <text>下一步：{{item.nextPlan || '-'}}</text>
+      <text>风险：{{item.riskDescription || item.riskLevel}}</text>
+    </view>
+    <button wx:if="{{isStrategy}}" class="secondary">查看填报记录</button>
+    <button wx:else class="primary" bindtap="fillMeasure" data-id="{{item.id}}" disabled="{{!item.canFill}}">{{item.canFill ? '去填报' : '仅查看'}}</button>
+  </view>
+</view>
+<view wx:if="{{activeTab==='standards'}}">
+  <view class="card compact-detail" wx:for="{{task.completionStandards}}" wx:key="id">
+    <view class="fold-head" bindtap="toggleStandard" data-id="{{item.id}}">
+      <view><text class="tag">标准 {{item.order}}</text><text class="tag">{{item.status}}</text></view>
+      <text class="muted">{{item.targetDate}} / {{item.completionRate}}%</text>
+    </view>
+    <view wx:if="{{expandedStandardId===item.id}}" class="fold-body">
+      <text>{{item.rawText}}</text>
+      <text>分组：{{item.displayGroup}} / 类型：{{item.type}}</text>
+      <text>目标：{{item.targetValue}}{{item.unit}} / 当前：{{item.currentValue}}{{item.unit}}</text>
+      <text>验收：{{item.verificationNote || '暂无'}}</text>
+    </view>
+  </view>
+</view>
+<view wx:if="{{activeTab==='history'}}" class="panel">
+  <view class="title">填报和审核记录</view>
+  <view wx:for="{{visibleHistory}}" wx:key="time" class="muted">{{item.time}} / {{item.operator}} / {{item.action}}</view>
+  <button wx:if="{{!showAllHistory && history.length > 5}}" class="secondary" bindtap="showAllHistory">查看全部</button>
+</view>

@@ -1,0 +1,64 @@
+<view class="notice">{{notice}}</view>
+<view class="panel head-panel">
+  <view class="title">{{title}}</view>
+  <view class="muted">{{subtitle}}</view>
+</view>
+<view wx:if="{{isStrategy}}" class="judgment {{judgment.level}}">
+  <view class="judgment-top"><text>总体判断</text><text>{{judgment.status}}</text></view>
+  <view class="judgment-grid">
+    <view><text>总体进度</text><text>{{judgment.actual}}%</text></view>
+    <view><text>序时进度</text><text>{{judgment.plan}}%</text></view>
+    <view><text>偏差</text><text>{{judgment.delta}}pp</text></view>
+  </view>
+  <view class="judgment-text">{{judgment.text}}</view>
+</view>
+<view class="grid dense-grid">
+  <view class="kpi {{item.level}}" wx:for="{{kpis}}" wx:key="label"><text>{{item.label}}</text><text>{{item.value}}</text><text>{{item.state}}</text></view>
+</view>
+<block wx:if="{{isStrategy}}">
+  <view class="panel compact">
+    <view class="section-title">重点异常任务</view>
+    <view class="mini-row danger-left" wx:for="{{exceptions}}" wx:key="id" bindtap="openTask" data-id="{{item.id}}">
+      <view>{{item.code}} {{item.taskName}}</view>
+      <text>{{item.leadDepartment}} / {{item.status}} / {{item.riskLevel}} / {{item.progress}}%</text>
+      <text>{{item.reason}}</text>
+    </view>
+  </view>
+  <view class="panel compact">
+    <view class="section-title">部门执行情况</view>
+    <view class="dept-row" wx:for="{{deptStats}}" wx:key="name">
+      <view>{{item.name}}</view>
+      <text>进度 {{item.progress}}% · 逾期 {{item.overdue}} · 高风险 {{item.highRisk}}</text>
+      <text>填报缺失 {{item.missingFill}} / {{item.status}}</text>
+    </view>
+  </view>
+  <view class="panel compact">
+    <view class="section-title">待处理事项</view>
+    <view class="todo-grid">
+      <view wx:for="{{todos}}" wx:key="label"><text>{{item.value}}</text><text>{{item.label}}</text></view>
+    </view>
+  </view>
+</block>
+<block wx:else>
+  <view class="panel compact">
+    <view class="section-title">待我处理</view>
+    <view class="mini-row" wx:for="{{todos}}" wx:key="id" bindtap="openTask" data-id="{{item.id}}">
+      <view>{{item.code}} {{item.taskName}}</view>
+      <text>{{item.leadDepartment}} / {{item.status}} / {{item.riskLevel}} / {{item.progress}}%</text>
+    </view>
+  </view>
+  <view class="panel compact">
+    <view class="section-title">由我牵头</view>
+    <view class="mini-row" wx:for="{{leadTasks}}" wx:key="id" bindtap="openTask" data-id="{{item.id}}">
+      <view>{{item.code}} {{item.taskName}}</view>
+      <text>{{item.leadDepartment}} / {{item.status}} / {{item.progress}}%</text>
+    </view>
+  </view>
+  <view class="panel compact">
+    <view class="section-title">近期截止事项</view>
+    <view class="mini-row" wx:for="{{dueTasks}}" wx:key="id" bindtap="openTask" data-id="{{item.id}}">
+      <view>{{item.code}} {{item.taskName}}</view>
+      <text>{{item.endDate}} / {{item.status}} / {{item.riskLevel}}</text>
+    </view>
+  </view>
+</block>
